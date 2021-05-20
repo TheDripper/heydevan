@@ -1,8 +1,8 @@
-import pages from "~/static/pages.json"
-import classes from "~/static/classes.json"
+import pages from "~/static/pages.json";
+import classes from "~/static/classes.json";
 export const state = () => ({
   posts: [],
-  classes: ''
+  classes: ""
 });
 
 export const mutations = {
@@ -18,13 +18,13 @@ export const actions = {
   //   const posts = await this.$axios.$get('/wp-json/wp/v2/product');
   //   commit('posts',posts);
   // },
-  async nuxtServerInit({commit}) {
-    if(process.env.NODE_ENV=='development') {
-      const posts = await this.$axios.$get('/wp-json/wp/v2/pages');
-      commit('posts',posts);
-    } else {
-      commit('posts',pages);
-    }
-      commit('classes',classes);
+  async nuxtServerInit({ commit }) {
+    // if(process.env.NODE_ENV=='development') {
+    const posts = await this.$axios.$get("/wp-json/wp/v2/pages");
+    commit("posts", posts);
+    // } else {
+    //   commit('posts',pages);
+    // }
+    commit("classes", classes);
   }
 };
