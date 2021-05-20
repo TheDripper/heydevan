@@ -1,6 +1,6 @@
 <template>
   <div id="root" class="flex">
-    <div class="hidden p-8 text-center w-full uppercase"></div>
+    <div :class="classes"></div>
     <div id="tiles" class="w-full h-screen" data-push="test">
       <div
         :id="post.title.rendered"
@@ -39,6 +39,9 @@ export default {
     posts() {
       return this.$store.state.posts;
     },
+    classes() {
+      return this.$store.state.classes;
+    },
   },
 };
 </script>
@@ -58,7 +61,8 @@ h3 {
   font-family: "Nunito Sans";
   @apply text-3xl font-bold;
 }
-p, a {
+p,
+a {
   font-family: "Nunito Sans";
 }
 .drop {

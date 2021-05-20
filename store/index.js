@@ -1,11 +1,16 @@
 import pages from "~/static/pages.json"
+import classes from "~/static/classes.json"
 export const state = () => ({
-  posts: []
+  posts: [],
+  classes: ''
 });
 
 export const mutations = {
   posts(state, posts) {
     state.posts = posts;
+  },
+  classes(state, classes) {
+    state.classes = classes;
   }
 };
 export const actions = {
@@ -20,6 +25,6 @@ export const actions = {
     } else {
       commit('posts',pages);
     }
-      // commit('posts',pages);
+      commit('classes',classes);
   }
 };

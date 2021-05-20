@@ -1,7 +1,7 @@
 module.exports = {
     important: true,
     purge: {
-      content: ["./template/*.php"],
+      content: ["components/**/*.vue", "layouts/**/*.vue", "pages/**/*.vue"],
       layers: ["components"],
     },
     darkMode: false, // or 'media' or 'class'
@@ -24,6 +24,7 @@ module.exports = {
         white: "#fff",
         pink: "#FB5373",
         "div-grey": "#979797",
+        "burnt": "#ef4300",
       },
       fontSize: {
         xs: ".75rem",

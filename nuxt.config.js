@@ -17,10 +17,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    "@/assets/style.min.css",
-    "@/static/slick.css"
-  ],
+  css: ["@/assets/style.min.css", "@/static/slick.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -38,7 +35,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
-    "~/modules/pages-json.js"
+    "~/modules/pages-json.js",
+    "~/modules/class-purge.js"
   ],
   googleFonts: {
     families: {
@@ -61,5 +59,5 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
 };
