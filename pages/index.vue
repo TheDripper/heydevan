@@ -1,7 +1,7 @@
 <template>
   <div id="root" class="flex">
     <div :class="classes"></div>
-    <div id="tiles" class="w-full h-screen" data-push="test">
+    <div id="tiles" class="w-full" data-push="test">
       <div
         :id="post.title.rendered"
         v-for="post in posts"
@@ -104,5 +104,8 @@ ul {
       @apply mx-auto;
     }
   }
+}
+.w-full-gutter {
+  width: calc(100% - 2rem);
 }
 </style>
