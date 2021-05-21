@@ -1,7 +1,7 @@
 <template>
   <div id="root" class="flex">
     <div :class="classes"></div>
-    <div id="tiles" class="w-full" data-push="test">
+    <div id="tiles" class="w-full">
       <div
         :id="post.title.rendered"
         v-for="post in posts"
