@@ -58,11 +58,12 @@ h2 {
   @apply text-4xl font-bold;
 }
 h3 {
-  font-family: "Nunito Sans";
+  font-family: "Nunito";
   @apply text-3xl font-bold;
 }
 p,
-a {
+a,
+li {
   font-family: "Nunito Sans";
 }
 .drop {
