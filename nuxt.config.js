@@ -53,7 +53,7 @@ export default {
     "@nuxtjs/proxy"
   ],
   proxy: {
-    "/wp-json": "https://eathereindy.nfshost.com/"
+    "/wp-json": "http://localhost:9009"
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
