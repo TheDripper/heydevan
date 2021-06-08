@@ -1,20 +1,27 @@
 # eathereindy
 
 ## Build Setup
+[Install Node](https://nodejs.org/en/download/)
+
+[Install Docker](https://nodejs.org/en/download/)
 
 ```bash
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# Spin up WP server
+$ docker compose up 
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# Start FE dev build tools
+$ nuxt
 
 # generate static project
-$ npm run generate
+# with FE dev running (nuxt)
+$ nuxt build
+$ nuxt generate
+$ git add .
+$ git commit -m "..."
+$ git push
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
