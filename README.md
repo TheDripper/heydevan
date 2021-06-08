@@ -9,13 +9,13 @@
 # install dependencies
 $ npm install
 
-# Spin up WP server
+# Spin up WP server at http://localhost:9009
 $ docker compose up 
 
 # Start FE dev build tools
 $ nuxt
 
-# generate static project
+# generate static project (publish to production)
 # with FE dev running (nuxt)
 $ nuxt build
 $ nuxt generate
@@ -24,4 +24,10 @@ $ git commit -m "..."
 $ git push
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+To edit/dev/preview WP:
+
+BE admin: http://localhost:9009/wp-admin
+
+FE preview: http://localhost:3000
+
+Production / Static URL (hosted on Netlify): https://pedantic-goldberg-489508.netlify.app/
