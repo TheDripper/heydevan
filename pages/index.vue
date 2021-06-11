@@ -49,25 +49,30 @@ export default {
 html,
 body {
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-head;
+}
 h1 {
-  font-family: "Nunito Sans";
   @apply text-6xl font-bold;
 }
 h2 {
-  font-family: "Nunito";
   @apply text-4xl font-bold;
 }
 h3 {
-  font-family: "Nunito";
   @apply text-3xl font-bold;
+}
+h4 {
+  @apply mb-2;
 }
 p,
 a,
 li {
-  font-family: "Nunito Sans";
-}
-.drop {
-  text-shadow: 2px 2px 4px blue, -2px -2px 4px blue;
+  @apply font-body;
 }
 ul {
   list-style: circle;
@@ -86,14 +91,12 @@ ul {
     @apply absolute rounded p-2;
     top: 0;
     left: 0;
-    background: #ef4300;
     color: white;
   }
   .slick-next {
     @apply absolute rounded p-2;
     top: 0;
     right: 0;
-    background: #ef4300;
     color: white;
   }
 }
@@ -108,5 +111,28 @@ ul {
 }
 .w-full-gutter {
   width: calc(100% - 2rem);
+}
+.wp-block-button__link {
+  border-radius: 0;
+  background: none;
+  border: 2px solid black;
+  color: black;
+  @apply font-body;
+}
+.wp-block-buttons {
+  @apply mt-8;
+}
+.bleed-up {
+  img {
+    transform: translateY(-30px);
+    @apply relative z-10;
+  }
+}
+.epmt {
+  @apply flex justify-end;
+  img {
+    max-width: 913px;
+    transform: translate(257px);
+  }
 }
 </style>

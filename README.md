@@ -3,14 +3,14 @@
 ## Build Setup
 [Install Node](https://nodejs.org/en/download/)
 
-[Install Docker](https://nodejs.org/en/download/)
+[Install Docker](https://docs.docker.com/get-docker/)
 
 ```bash
 # install dependencies
 $ npm install
 
 # Spin up WP server at http://localhost:9009
-$ docker compose up 
+$ docker-compose up 
 
 # Start FE dev build tools
 $ nuxt

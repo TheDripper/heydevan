@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "eathereindy",
+    title: "heydevan",
     htmlAttrs: {
       lang: "en"
     },
@@ -40,9 +40,8 @@ export default {
   ],
   googleFonts: {
     families: {
-      "Fira+Sans": true,
-      "Nunito+Sans": true,
-      Nunito: true
+      Merriweather: true,
+      "Open+Sans": true
     }
   },
 

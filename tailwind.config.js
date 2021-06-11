@@ -45,10 +45,8 @@ module.exports = {
         body: "18px",
       },
       fontFamily: {
-        head: ["Geomanist-bold"],
-        body: ["Thesans-reg"],
-        "body-bold": ["Thesans-bold"],
-        "body-medium": ["Thesans-medium"],
+        head: ["Merriweather"],
+        body: ["Open Sans"],
       },
       textColor: {
         pink: "#FB5373",
