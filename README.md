@@ -31,3 +31,10 @@ BE admin: http://localhost:9009/wp-admin
 FE preview: http://localhost:3000
 
 Production / Static URL (hosted on Netlify): https://pedantic-goldberg-489508.netlify.app/
+
+
+To get latest code changes: 
+
+```bash
+$ git pull
+```
