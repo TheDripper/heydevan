@@ -1,6 +1,7 @@
 # heydevan
 
 ## Build Setup
+### Only on first install
 [Install Docker](https://docs.docker.com/get-docker/)
 
 Install NVM (node)
@@ -12,6 +13,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 nvm install 14
 nvm use 14
+nvm alias default 14
 
 ```
 
@@ -19,13 +21,19 @@ Install Nuxt
 
 
 ```bash
-sudo npm i -g nuxt #enter account PW for your machine for sudo cmd
+# enter account PW for your machine for sudo cmd
+sudo npm i -g nuxt 
 ```
 
 ```bash
 # install dependencies
 npm install
+```
+## Develop / Publish
+### Do this every time
 
+
+```bash
 # Spin up WP server at http://localhost:9009
 docker-compose up 
 
