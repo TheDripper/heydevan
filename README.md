@@ -28,6 +28,11 @@ sudo npm i -g nuxt
 ```bash
 # install dependencies
 npm install
+
+# If you get errors re: node-sass, confirm you're on node 14, then rebuild:
+nvm use 14
+npm rebuild node-sass
+
 ```
 ## Develop / Publish
 ### Do this every time
