@@ -45,8 +45,9 @@ module.exports = {
         body: "18px",
       },
       fontFamily: {
-        head: ["Merriweather"],
-        body: ["Open Sans"],
+        head: ["freight-big-pro"],
+        body: ["europa"],
+        footer: ["futura-pt"]
       },
       textColor: {
         pink: "#FB5373",

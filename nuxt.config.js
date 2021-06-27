@@ -3,9 +3,9 @@ export default {
   target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  server: {
-    port: 4000
-  },
+  // server: {
+  //   port: 4000
+  // },
   head: {
     title: "heydevan",
     htmlAttrs: {
@@ -16,7 +16,10 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://use.typekit.net/izu0ugl.css"}
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -61,5 +64,5 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 };

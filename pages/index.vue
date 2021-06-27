@@ -117,7 +117,7 @@ ul {
   background: none;
   border: 2px solid black;
   color: black;
-  @apply font-body;
+  @apply font-footer;
 }
 .wp-block-buttons {
   @apply mt-8;

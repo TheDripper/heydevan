@@ -967,6 +967,6 @@ function custom_taxonomy()
 		'show_tagcloud'              => true,
 		'show_in_rest'				 => true
 	);
-	register_taxonomy('tag', array('product', 'person', 'business', 'organization','cell'), $args);
+	register_taxonomy('tag', array('product', 'person', 'business', 'organization', 'cell'), $args);
 }
 add_action('init', 'custom_taxonomy', 0);
