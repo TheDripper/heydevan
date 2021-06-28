@@ -1,7 +1,7 @@
 <template>
   <div id="root" class="flex">
     <div :class="classes"></div>
-    <div id="content" v-html="page.description"></div>
+    <div id="content" v-html="page.content.rendered"></div>
   </div>
 </template>
 
@@ -9,10 +9,15 @@
 import { mapActions } from "vuex";
 import $ from "jquery";
 export default {
-  async asyncData(context) {
-    let page = await context.$content('home').where({slug:'home'}).fetch();
-    return {
-      page
+  async asyncData({ $axios }) {
+    try {
+      // let page = await $axios("/server-middleware/page?id=home");
+      let { data } = await $axios("/wp-json/wp/v2/pages/6");
+      return {
+        page: data
+      };
+    } catch (err) {
+      console.log(err);
     }
   },
   created() {},
@@ -44,6 +49,11 @@ export default {
 };
 </script>
 <style lang="scss">
+#content {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
 html,
 body {
 }

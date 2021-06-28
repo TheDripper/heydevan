@@ -6,6 +6,9 @@ export default {
   // server: {
   //   port: 4000
   // },
+  serverMiddleware: [
+    { path: "/server-middleware", handler: "~/server-middleware/rest.js" },
+  ],
   head: {
     title: "heydevan",
     htmlAttrs: {

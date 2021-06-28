@@ -14,10 +14,10 @@ export const mutations = {
   }
 };
 export const actions = {
-  // async getPage(context, id) {
-  //   const posts = await this.$axios.$get('/wp-json/wp/v2/product');
-  //   commit('posts',posts);
-  // },
+   async getPage(context, id) {
+     const page = await this.$axios.$get('/server-middleware/page/'+id);
+     return page
+   },
   async nuxtServerInit({ commit }) {
     if (process.env.NODE_ENV == "development") {
       const posts = await this.$axios.$get("/wp-json/wp/v2/pages");
