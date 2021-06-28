@@ -55,7 +55,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    "@nuxtjs/proxy"
+    "@nuxtjs/proxy",
+    "@nuxtjs/content"
   ],
   proxy: {
     "/wp-json": "http://localhost:9009"

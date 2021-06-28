@@ -1,15 +1,7 @@
 <template>
   <div id="root" class="flex">
     <div :class="classes"></div>
-    <div id="tiles" class="w-full">
-      <div
-        :id="post.title.rendered"
-        v-for="post in posts"
-        :key="post.id"
-        class="post"
-        v-html="post.content.rendered"
-      />
-    </div>
+    <div id="content" v-html="page.description"></div>
   </div>
 </template>
 
@@ -17,6 +9,12 @@
 import { mapActions } from "vuex";
 import $ from "jquery";
 export default {
+  async asyncData(context) {
+    let page = await context.$content('home').where({slug:'home'}).fetch();
+    return {
+      page
+    }
+  },
   created() {},
   mounted() {
     // $("a").each(function () {
@@ -55,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-head;
+  @apply font-head leading-snug;
 }
 h1 {
   @apply text-6xl font-bold;
