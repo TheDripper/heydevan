@@ -14,7 +14,7 @@ export default {
       // let page = await $axios("/server-middleware/page?id=home");
       let { data } = await $axios("/wp-json/wp/v2/pages/6");
       return {
-        page: data
+        page: data,
       };
     } catch (err) {
       console.log(err);
@@ -144,17 +144,16 @@ ul {
   }
 }
 .arrow-link {
-  @apply relative font-bold mt-12;
   a {
-    color: #B8C734;
-    @apply font-normal;
-  }
-  &:before {
-    @apply absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-38%);
-    content: url('http://localhost:9009/wp-content/uploads/2021/06/Arrow.svg');
+    color: #b8c734;
+    @apply relative font-normal mt-12 inline-block;
+    &:after {
+      @apply absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(110%,-38%);
+      content: url("http://localhost:9009/wp-content/uploads/2021/06/Arrow.svg");
+    }
   }
 }
 .list-none {
