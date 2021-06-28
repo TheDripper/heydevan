@@ -7,14 +7,7 @@ export default async function asyncModule() {
     const { data } = await axios(
       "http://localhost:9009/wp-json/wp/v2/pages/"
     );
-    for (let page of data) {
-      let pageFE ={
-        title: page.title.rendered,
-        slug: page.slug,
-        description: page.content.rendered
-      }
-      fs.writeFileSync("./content/"+page.slug+".json", JSON.stringify(pageFE));
-    }
+    fs.writeFileSync("./static/pages.json", JSON.stringify(data));
   } catch (err) {
     console.log(err);
   }
