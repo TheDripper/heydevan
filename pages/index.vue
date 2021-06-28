@@ -80,7 +80,7 @@ h4 {
 p,
 a,
 li {
-  @apply font-body;
+  @apply font-body font-light;
 }
 ul {
   list-style: circle;
@@ -141,6 +141,25 @@ ul {
   img {
     max-width: 913px;
     transform: translate(257px);
+  }
+}
+.arrow-link {
+  @apply relative font-bold mt-12;
+  a {
+    color: #B8C734;
+    @apply font-normal;
+  }
+  &:before {
+    @apply absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-38%);
+    content: url('http://localhost:9009/wp-content/uploads/2021/06/Arrow.svg');
+  }
+}
+.list-none {
+  ul {
+    list-style: none !important;
   }
 }
 </style>
