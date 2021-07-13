@@ -152,7 +152,7 @@ ul {
       top: 50%;
       right: 0;
       transform: translate(110%,-38%);
-      content: url("/wp-content/uploads/2021/06/Arrow.svg");
+      content: url("/Arrow.svg");
     }
   }
 }
