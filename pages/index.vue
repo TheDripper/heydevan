@@ -9,17 +9,20 @@
 import { mapActions } from "vuex";
 import $ from "jquery";
 export default {
-  // async asyncData({ $axios }) {
-  //   try {
-  //     // let page = await $axios("/server-middleware/page?id=home");
-  //     let { data } = await $axios("/wp-json/wp/v2/pages/6");
-  //     return {
-  //       page: data,
-  //     };
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
+  methods: {
+    ...mapActions['getpage']
+  },
+  async asyncData({ $axios }) {
+    try {
+      // let page = await $axios("/server-middleware/page?id=home");
+      let { data } = await getPage(6);
+      return {
+        page: data,
+      };
+    } catch (err) {
+      console.log(err);
+    }
+  },
   created() {},
   mounted() {
     // $("a").each(function () {
@@ -39,9 +42,9 @@ export default {
     });
   },
   computed: {
-    page() {
-      return this.$store.state.posts[0];
-    },
+    // page() {
+    //   return this.$store.state.posts[0];
+    // },
     classes() {
       return this.$store.state.classes;
     },

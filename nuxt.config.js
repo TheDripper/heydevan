@@ -3,9 +3,9 @@ export default {
   target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // server: {
-  //   port: 4000
-  // },
+  server: {
+    host: "0.0.0.0"
+  },
   serverMiddleware: [
     { path: "/server-middleware", handler: "~/server-middleware/rest.js" },
   ],
@@ -44,7 +44,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
-    "~/modules/pages-json.js",
     "~/modules/class-purge.js"
   ],
   googleFonts: {
@@ -62,7 +61,11 @@ export default {
     "@nuxtjs/content"
   ],
   proxy: {
-    "/wp-json": "http://localhost:9009"
+    "wordpress": {
+      target: "http://localhost:9009",
+      pathRewrite: {'/server-middleware/':''},
+      changeOrigin: true
+    }
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
